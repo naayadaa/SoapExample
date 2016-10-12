@@ -96,6 +96,8 @@
 			<version>${log4j.version}</version>
 		</dependency>
 
+
+
 	</dependencies>
 
 	<build>
@@ -108,6 +110,35 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 
+			<plugin>
+				<groupId>org.apache.cxf</groupId>
+				<artifactId>cxf-codegen-plugin</artifactId>
+				<version>3.1.7</version>
+				<executions>
+					<execution>
+						<id>generate-sources</id>
+						<phase>generate-sources</phase>
+						<configuration>
+
+							<sourceRoot>src/main/java/com/zagar/generated/cxf</sourceRoot>
+							<wsdlOptions>
+								<wsdlOption>
+									<wsdl>src/main/resources/PackageSearch.wsdl</wsdl>
+                                    <wsdlLocation>classpath:PackageSearch.wsdl</wsdlLocation>
+									<extraargs>
+                                        <extraarg>-xjc-b,src/main/resources/binding.xjb</extraarg>
+										<!--<extraarg>-xjc-Xts</extraarg>-->
+									</extraargs>
+								</wsdlOption>
+							</wsdlOptions>
+						</configuration>
+						<goals>
+							<goal>wsdl2java</goal>
+						</goals>
+					</execution>
+				</executions>
+
+			</plugin>
 			<!--<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>axistools-maven-plugin</artifactId>
@@ -187,7 +218,7 @@
 				</executions>
 			</plugin>-->
 
-			<plugin>
+			<!--<plugin>
 				<groupId>org.jvnet.jaxb2.maven2</groupId>
 				<artifactId>maven-jaxb2-plugin</artifactId>
 				<version>0.12.3</version>
@@ -211,17 +242,17 @@
 							<generatePackage>com.zagar.wsdl</generatePackage>
 
 
-							<!--<schemas>
+							&lt;!&ndash;<schemas>
                                 <schema>
                                     <url>https://api-ext-test.pegasys.pegast.com/PackageSearch.svc?singleWsdl</url>
                                 </schema>
-                            </schemas>-->
+                            </schemas>&ndash;&gt;
 
 						</configuration>
 					</execution>
 				</executions>
 
-			</plugin>
+			</plugin>-->
 			<!-- end::wsdl[] -->
 
 		</plugins>
