@@ -1,6 +1,8 @@
 <jaxb:bindings xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
                xmlns:xs="http://www.w3.org/2001/XMLSchema"
                version="1.0">
+    <jaxb:globalBindings generateElementProperty="false"/>
+
     <jaxb:bindings schemaLocation="PackageSearch.wsdl">
         <jaxb:bindings node="//xs:element[@name='PackageSearchOptionsResultReferenceDescription']">
             <jaxb:factoryMethod name="TypePackageSearchOptionsResultReferenceDescription"/>
