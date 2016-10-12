@@ -120,14 +120,14 @@
 						<phase>generate-sources</phase>
 						<configuration>
 
-							<sourceRoot>src/main/java/com/zagar/generated/cxf</sourceRoot>
+							<sourceRoot>target/generated-sources/zagar/cxf</sourceRoot>
 							<wsdlOptions>
 								<wsdlOption>
 									<wsdl>src/main/resources/PackageSearch.wsdl</wsdl>
                                     <wsdlLocation>classpath:PackageSearch.wsdl</wsdlLocation>
 									<extraargs>
                                         <extraarg>-xjc-b,src/main/resources/binding.xjb</extraarg>
-										<!--<extraarg>-xjc-Xts</extraarg>-->
+										<extraarg>-client</extraarg>
 									</extraargs>
 								</wsdlOption>
 							</wsdlOptions>
