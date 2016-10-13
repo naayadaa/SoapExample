@@ -48,6 +48,7 @@ public class CXFclientTest {
         PackageSearchOptionsParameters parameters = new PackageSearchOptionsParameters();
         //parameters.setDepartureLocationId();
         PackageSearchOptionsRequest request = new PackageSearchOptionsRequest();
+
         request.setParameters(parameters);
         PackageSearchOptionsResponse response = port.getOptions(request);
         response.toString();
