@@ -43,6 +43,23 @@
 			<scope>test</scope>
 		</dependency>
 
+	<dependency>
+		<groupId>org.apache.cxf</groupId>
+		<artifactId>cxf-rt-frontend-jaxws</artifactId>
+		<version>3.1.7</version>
+	</dependency>
+	<dependency>
+		<groupId>org.apache.cxf</groupId>
+		<artifactId>cxf-rt-transports-http</artifactId>
+		<version>3.1.7</version>
+	</dependency>
+	<!-- Jetty is needed if you're are not using the CXFServlet -->
+	<dependency>
+		<groupId>org.apache.cxf</groupId>
+		<artifactId>cxf-rt-transports-http-jetty</artifactId>
+		<version>3.1.7</version>
+	</dependency>
+
 		<!--<dependency>-->
 			<!--<groupId>com.sun.xml.ws</groupId>-->
 			<!--<artifactId>jaxws-rt</artifactId>-->
@@ -50,12 +67,12 @@
 		<!--</dependency>-->
 
         <!-- https://mvnrepository.com/artifact/axis/axis -->
-        <dependency>
+     <!--   <dependency>
             <groupId>axis</groupId>
             <artifactId>axis</artifactId>
             <version>1.4</version>
         </dependency>
-
+-->
   <!--      &lt;!&ndash;&lt;!&ndash; https://mvnrepository.com/artifact/org.slf4j/slf4j-log4j12 &ndash;&gt;&ndash;&gt;
         <dependency>
             <groupId>org.slf4j</groupId>
@@ -65,7 +82,7 @@
 
 
 
-		<dependency>
+		<!--<dependency>
 			<groupId>org.apache.axis2</groupId>
 			<artifactId>axis2-kernel</artifactId>
 			<version>${axis2.version}</version>
@@ -94,7 +111,7 @@
 			<groupId>log4j</groupId>
 			<artifactId>log4j</artifactId>
 			<version>${log4j.version}</version>
-		</dependency>
+		</dependency>-->
 
 
 
@@ -124,7 +141,7 @@
 							<wsdlOptions>
 								<wsdlOption>
 									<wsdl>src/main/resources/PackageSearch.wsdl</wsdl>
-                                    <wsdlLocation>classpath:PackageSearch.wsdl</wsdlLocation>
+                                    <!--<wsdlLocation>classpath:PackageSearch.wsdl</wsdlLocation>-->
 									<extraargs>
                                         <extraarg>-xjc-b,src/main/resources/binding.xjb</extraarg>
 										<extraarg>-client</extraarg>
