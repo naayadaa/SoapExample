@@ -6,6 +6,7 @@ import com.zagar.wsdl.PackageSearchOptionsRequest;
 import com.zagar.wsdl.PackageSearchOptionsResponse;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
+import org.springframework.ws.client.core.WebServiceMessageCallback;
 import org.springframework.ws.client.core.support.WebServiceGatewaySupport;
 import org.springframework.ws.soap.client.core.SoapActionCallback;
 
@@ -29,7 +30,7 @@ public class PegasSpringClient extends WebServiceGatewaySupport {
         req.setParameters(params);
 
         PackageSearchOptionsResponse res = (PackageSearchOptionsResponse) getWebServiceTemplate()
-                .marshalSendAndReceive(uri, req, new SoapActionCallback(getOptionsUri));
+                .marshalSendAndReceive(uri, req, new SoapActionHeadersCallback(getOptionsUri));
 
         return res;
     }
