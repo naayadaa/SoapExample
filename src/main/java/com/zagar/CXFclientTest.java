@@ -21,20 +21,20 @@ public class CXFclientTest {
     private static  final String LANGUAGE_CODE = "RU";
 
 
-    public static void main(String[] args) throws JAXBException {
+    /*public static void main(String[] args) throws JAXBException {
 
         PackageSearchService service = new PackageSearchService();
         IPackageSearchService port = service.getBasicHttpBindingIPackageSearchService();
 
         Map<String, Object> requestContext = ((BindingProvider)port).getRequestContext();
-      /*  Map<String, Object> headers = new HashMap();
+      *//*  Map<String, Object> headers = new HashMap();
         List<String> apiUserKey = new ArrayList<>();
         apiUserKey.add(API_USER_KEY);
         List<String> languageCode = new ArrayList<>();
         languageCode.add(LANGUAGE_CODE);
         headers.put("ApiUserKey", apiUserKey);
         headers.put("PreferredLanguageCode", languageCode);
-        requestContext.put(MessageContext.HTTP_REQUEST_HEADERS,headers);*/
+        requestContext.put(MessageContext.HTTP_REQUEST_HEADERS,headers);*//*
 
         List<Header> headers = new ArrayList<>();
         Header apiUserKey = new Header(new QName("http://pegast.com/pegasys/api", "ApiUserKey"), API_USER_KEY, new JAXBDataBinding(String.class));
@@ -52,5 +52,5 @@ public class CXFclientTest {
         request.setParameters(parameters);
         PackageSearchOptionsResponse response = port.getOptions(request);
         response.toString();
-    }
+    }*/
 }

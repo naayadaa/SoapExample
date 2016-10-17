@@ -64,8 +64,7 @@
             <xs:element name="PackageSearchOptionsParameters" nillable="true" type="q6:PackageSearchOptionsParameters"
                         xmlns:q6="http://pegast.com/pegasys/api"/>
             <xs:simpleType name="PackageSearchOptionGroups">
-                <xs:list>
-                    <xs:simpleType>
+
                         <xs:restriction base="xs:string">
                             <xs:enumeration value="None">
                                 <xs:annotation>
@@ -221,8 +220,7 @@
                                 </xs:annotation>
                             </xs:enumeration>
                         </xs:restriction>
-                    </xs:simpleType>
-                </xs:list>
+
             </xs:simpleType>
             <xs:element name="PackageSearchOptionGroups" nillable="true" type="q7:PackageSearchOptionGroups"
                         xmlns:q7="http://pegast.com/pegasys/api"/>
@@ -917,15 +915,13 @@
                         type="q173:PackageSearchParametersAirlineRestriction"
                         xmlns:q173="http://pegast.com/pegasys/api"/>
             <xs:simpleType name="PackageSearchParametersAirlineRestrictionType">
-                <xs:list>
-                    <xs:simpleType>
+
                         <xs:restriction base="xs:string">
                             <xs:enumeration value="Outgoing"/>
                             <xs:enumeration value="Return"/>
                             <xs:enumeration value="OutgoingAndReturn"/>
                         </xs:restriction>
-                    </xs:simpleType>
-                </xs:list>
+
             </xs:simpleType>
             <xs:element name="PackageSearchParametersAirlineRestrictionType" nillable="true"
                         type="q174:PackageSearchParametersAirlineRestrictionType"
@@ -939,8 +935,7 @@
             <xs:element name="ArrayOfFlightServiceAvailabilityStatus" nillable="true"
                         type="q176:ArrayOfFlightServiceAvailabilityStatus" xmlns:q176="http://pegast.com/pegasys/api"/>
             <xs:simpleType name="PackageSearchGroupingModes">
-                <xs:list>
-                    <xs:simpleType>
+
                         <xs:restriction base="xs:string">
                             <xs:enumeration value="None">
                                 <xs:annotation>
@@ -961,8 +956,7 @@
                                 </xs:annotation>
                             </xs:enumeration>
                         </xs:restriction>
-                    </xs:simpleType>
-                </xs:list>
+
             </xs:simpleType>
             <xs:element name="PackageSearchGroupingModes" nillable="true" type="q177:PackageSearchGroupingModes"
                         xmlns:q177="http://pegast.com/pegasys/api"/>
@@ -987,8 +981,7 @@
             <xs:element name="HotelServiceAvailabilityStatus" nillable="true" type="q180:HotelServiceAvailabilityStatus"
                         xmlns:q180="http://pegast.com/pegasys/api"/>
             <xs:simpleType name="HotelOfferTypes">
-                <xs:list>
-                    <xs:simpleType>
+
                         <xs:restriction base="xs:string">
                             <xs:enumeration value="None">
                                 <xs:annotation>
@@ -1045,8 +1038,7 @@
                                 </xs:annotation>
                             </xs:enumeration>
                         </xs:restriction>
-                    </xs:simpleType>
-                </xs:list>
+
             </xs:simpleType>
             <xs:element name="HotelOfferTypes" nillable="true" type="q181:HotelOfferTypes"
                         xmlns:q181="http://pegast.com/pegasys/api"/>

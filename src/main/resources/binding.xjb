@@ -12,5 +12,10 @@
         <jaxb:bindings node="//xs:element[@name='PackagePriceDynamicResultReferenceDescription']">
             <jaxb:factoryMethod name="TypePackagePriceDynamicResultReferenceDescription"/>
         </jaxb:bindings>
+
+        <!--<jaxb:bindings node="//xs:simpleType[@name='PackageSearchOptionGroups']/xs:list/xs:simpleType/xs:restriction/xs:enumeration[@value='None']">
+            <jaxb:typesafeEnumMember name="None" />
+        </jaxb:bindings>-->
+
     </jaxb:bindings>
 </jaxb:bindings>
